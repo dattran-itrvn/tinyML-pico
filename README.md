@@ -1,3 +1,3 @@
 # tinyML-pico
-This project is simply an evaluation of using Python to develop tinyML applications on Pico. I will experiment with the environmental sound recognition application first.
-Next, I will investigate it with ECG signals. I plan to develop an algorithm for detecting arrhythmias.
+End-to-end tinyML audio classification with the Raspberry Pi RP2040
+https://blog.tensorflow.org/2021/09/TinyML-Audio-for-everyone.html
