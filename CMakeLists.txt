@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.13)
+
+set(FAMILY rp2040)
+
+set(ENV{PICO_SDK_PATH} "/home/ttb/raspberry-pi-pico/pico/pico-sdk")
+
+include(pico_sdk_import.cmake)
+include(pico_extras_import.cmake)
+
+project(pico_test)
+
+# initialize the Raspberry Pi Pico SDK
+pico_sdk_init()
+
+# rest of your project
+add_executable(main main.cpp)
+
+# Add pico_stdlib library which aggregates commonly used features
+target_link_libraries(main
+                      pico_stdlib
+                      hardware_pio
+                      hardware_irq
+                      hardware_dma
+                      pico_multicore
+                      pico_unique_id
+                      )
+
+pico_enable_stdio_usb(main 1)
+pico_enable_stdio_uart(main 0)
+
+# create map/bin/hex/uf2 file in addition to ELF.
+pico_add_extra_outputs(main)
