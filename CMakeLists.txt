@@ -13,7 +13,10 @@ project(pico_test)
 pico_sdk_init()
 
 # rest of your project
-add_executable(main main.cpp)
+add_executable(main
+               main.cpp
+               Wav.cpp
+               )
 
 # Add pico_stdlib library which aggregates commonly used features
 target_link_libraries(main
@@ -25,8 +28,19 @@ target_link_libraries(main
                       pico_unique_id
                       )
 
+target_compile_options(main PUBLIC
+                    -Wno-error=shadow
+                    -Wno-error=cast-align
+                    -Wno-error=cast-qual
+                    -Wno-error=redundant-decls
+                    -Wno-error=sign-conversion
+                    -Wno-error=conversion
+                    -Wno-error=sign-compare
+                    -Wno-error=unused-function
+                    )
+                                
+
 pico_enable_stdio_usb(main 1)
-pico_enable_stdio_uart(main 0)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(main)

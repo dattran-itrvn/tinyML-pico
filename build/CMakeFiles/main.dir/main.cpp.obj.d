@@ -58,6 +58,7 @@ CMakeFiles/main.dir/main.cpp.obj: \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+ /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
  /home/ttb/raspberry-pi-pico/pico/Pico_Test/machine_i2s.c \
  /usr/include/newlib/string.h /usr/include/newlib/sys/_locale.h \
  /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
@@ -74,4 +75,5 @@ CMakeFiles/main.dir/main.cpp.obj: \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h
+ /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
+ /home/ttb/raspberry-pi-pico/pico/Pico_Test/Wav.h

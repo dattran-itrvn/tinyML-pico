@@ -1823,12 +1823,12 @@ CMakeFiles/main.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/main.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles 65
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -1979,7 +1979,7 @@ pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/clean:
 pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/build.make pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/build.make pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=77 "Built target pico_scanvideo_scanvideo_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=79 "Built target pico_scanvideo_scanvideo_pio_h"
 .PHONY : pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2005,7 +2005,7 @@ pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.
 pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=73 "Built target pico_audio_i2s_audio_i2s_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=75 "Built target pico_audio_i2s_audio_i2s_pio_h"
 .PHONY : pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2031,7 +2031,7 @@ pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pi
 pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=74 "Built target pico_audio_pwm_audio_pwm_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=76 "Built target pico_audio_pwm_audio_pwm_pio_h"
 .PHONY : pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2057,7 +2057,7 @@ pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pi
 pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=75 "Built target pico_audio_spdif_audio_spdif_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=77 "Built target pico_audio_spdif_audio_spdif_pio_h"
 .PHONY : pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2083,7 +2083,7 @@ pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_sp
 pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/build.make pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/build.make pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=78 "Built target pico_sd_card_sd_card_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=80 "Built target pico_sd_card_sd_card_pio_h"
 .PHONY : pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2109,7 +2109,7 @@ pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.di
 pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/all: pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/all
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build.make pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build.make pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=76 "Built target pico_scanvideo_dpi_timing_pio_h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles --progress-num=78 "Built target pico_scanvideo_dpi_timing_pio_h"
 .PHONY : pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/all
 
 # Build rule for subdir invocation for target.

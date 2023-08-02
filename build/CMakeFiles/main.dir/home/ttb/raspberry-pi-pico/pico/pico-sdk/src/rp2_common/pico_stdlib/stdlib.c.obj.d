@@ -44,13 +44,10 @@ CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+ /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/include/hardware/pll.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pll.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pll.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
  /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
- /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
+ /home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/Wav.cpp.obj"
+  "CMakeFiles/main.dir/Wav.cpp.obj.d"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj.d"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
@@ -82,6 +84,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d"
+  "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+  "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"

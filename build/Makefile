@@ -272,6 +272,30 @@ pico_scanvideo_dpi_timing_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build.make pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build
 .PHONY : pico_scanvideo_dpi_timing_pio_h/fast
 
+Wav.obj: Wav.cpp.obj
+.PHONY : Wav.obj
+
+# target to build an object file
+Wav.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.obj
+.PHONY : Wav.cpp.obj
+
+Wav.i: Wav.cpp.i
+.PHONY : Wav.i
+
+# target to preprocess a source file
+Wav.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.i
+.PHONY : Wav.cpp.i
+
+Wav.s: Wav.cpp.s
+.PHONY : Wav.s
+
+# target to generate assembly for a file
+Wav.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.s
+.PHONY : Wav.cpp.s
+
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj
 
@@ -1224,6 +1248,30 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
 
@@ -1316,6 +1364,9 @@ help:
 	@echo "... pico_sd_card_sd_card_pio_h"
 	@echo "... bs2_default"
 	@echo "... main"
+	@echo "... Wav.obj"
+	@echo "... Wav.i"
+	@echo "... Wav.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.s"
@@ -1435,6 +1486,9 @@ help:
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
