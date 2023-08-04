@@ -793,5 +793,6 @@ STATIC int machine_i2s_stream_read(machine_i2s_obj_t *self, void *buf_in, size_t
     appbuf.buf = (void *)buf_in;
     appbuf.len = size;
     uint32_t num_bytes_read = fill_appbuf_from_ringbuf(self, &appbuf);
+    
     return num_bytes_read;
 }

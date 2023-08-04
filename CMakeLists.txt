@@ -22,6 +22,7 @@ add_executable(main
 target_link_libraries(main
                       pico_stdlib
                       hardware_pio
+                      hardware_gpio
                       hardware_irq
                       hardware_dma
                       pico_multicore
