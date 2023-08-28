@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "lib/CMSIS_5/CMSIS/DSP/Source/SVMFunctions",
+		"source" : "lib/CMSIS_5/CMSIS/DSP/Source/SVMFunctions"
+	}
+}
