@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

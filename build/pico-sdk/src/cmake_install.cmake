@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/pico-sdk/src/common/cmake_install.cmake")
-  include("/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/pico-sdk/src/rp2_common/cmake_install.cmake")
-  include("/home/ttb/raspberry-pi-pico/pico/Pico_Test/build/pico-sdk/src/rp2040/cmake_install.cmake")
+  include("/home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/pico-sdk/src/common/cmake_install.cmake")
+  include("/home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/pico-sdk/src/rp2_common/cmake_install.cmake")
+  include("/home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/pico-sdk/src/rp2040/cmake_install.cmake")
 
 endif()
 

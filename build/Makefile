@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ttb/raspberry-pi-pico/pico/Pico_Test
+CMAKE_SOURCE_DIR = /home/ttb/raspberry-pi-pico/pico/Pico_TinyML
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ttb/raspberry-pi-pico/pico/Pico_Test/build
+CMAKE_BINARY_DIR = /home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles /home/ttb/raspberry-pi-pico/pico/Pico_Test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/CMakeFiles /home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_Test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ttb/raspberry-pi-pico/pico/Pico_TinyML/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named pico_tinyML
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+pico_tinyML: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_tinyML
+.PHONY : pico_tinyML
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+pico_tinyML/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/build
+.PHONY : pico_tinyML/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -191,117 +191,705 @@ PioasmBuild: cmake_check_build_system
 
 # fast build rule for target.
 PioasmBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/build.make pico_extras/src/common/pico_scanvideo/CMakeFiles/PioasmBuild.dir/build
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/build
 .PHONY : PioasmBuild/fast
 
 #=============================================================================
-# Target rules for targets named pico_scanvideo_scanvideo_pio_h
+# Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 
 # Build rule for target.
-pico_scanvideo_scanvideo_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_scanvideo_scanvideo_pio_h
-.PHONY : pico_scanvideo_scanvideo_pio_h
+cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
+.PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 
 # fast build rule for target.
-pico_scanvideo_scanvideo_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/build.make pico_extras/src/common/pico_scanvideo/CMakeFiles/pico_scanvideo_scanvideo_pio_h.dir/build
-.PHONY : pico_scanvideo_scanvideo_pio_h/fast
+cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
+.PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
-# Target rules for targets named pico_audio_i2s_audio_i2s_pio_h
+# Target rules for targets named CMSISDSPBasicMath
 
 # Build rule for target.
-pico_audio_i2s_audio_i2s_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_audio_i2s_audio_i2s_pio_h
-.PHONY : pico_audio_i2s_audio_i2s_pio_h
+CMSISDSPBasicMath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPBasicMath
+.PHONY : CMSISDSPBasicMath
 
 # fast build rule for target.
-pico_audio_i2s_audio_i2s_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_i2s/CMakeFiles/pico_audio_i2s_audio_i2s_pio_h.dir/build
-.PHONY : pico_audio_i2s_audio_i2s_pio_h/fast
+CMSISDSPBasicMath/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/BasicMathFunctions/CMakeFiles/CMSISDSPBasicMath.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/BasicMathFunctions/CMakeFiles/CMSISDSPBasicMath.dir/build
+.PHONY : CMSISDSPBasicMath/fast
 
 #=============================================================================
-# Target rules for targets named pico_audio_pwm_audio_pwm_pio_h
+# Target rules for targets named CMSISDSPComplexMath
 
 # Build rule for target.
-pico_audio_pwm_audio_pwm_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_audio_pwm_audio_pwm_pio_h
-.PHONY : pico_audio_pwm_audio_pwm_pio_h
+CMSISDSPComplexMath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPComplexMath
+.PHONY : CMSISDSPComplexMath
 
 # fast build rule for target.
-pico_audio_pwm_audio_pwm_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_pwm/CMakeFiles/pico_audio_pwm_audio_pwm_pio_h.dir/build
-.PHONY : pico_audio_pwm_audio_pwm_pio_h/fast
+CMSISDSPComplexMath/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/ComplexMathFunctions/CMakeFiles/CMSISDSPComplexMath.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/ComplexMathFunctions/CMakeFiles/CMSISDSPComplexMath.dir/build
+.PHONY : CMSISDSPComplexMath/fast
 
 #=============================================================================
-# Target rules for targets named pico_audio_spdif_audio_spdif_pio_h
+# Target rules for targets named CMSISDSPQuaternionMath
 
 # Build rule for target.
-pico_audio_spdif_audio_spdif_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_audio_spdif_audio_spdif_pio_h
-.PHONY : pico_audio_spdif_audio_spdif_pio_h
+CMSISDSPQuaternionMath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPQuaternionMath
+.PHONY : CMSISDSPQuaternionMath
 
 # fast build rule for target.
-pico_audio_spdif_audio_spdif_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/build.make pico_extras/src/rp2_common/pico_audio_spdif/CMakeFiles/pico_audio_spdif_audio_spdif_pio_h.dir/build
-.PHONY : pico_audio_spdif_audio_spdif_pio_h/fast
+CMSISDSPQuaternionMath/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/QuaternionMathFunctions/CMakeFiles/CMSISDSPQuaternionMath.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/QuaternionMathFunctions/CMakeFiles/CMSISDSPQuaternionMath.dir/build
+.PHONY : CMSISDSPQuaternionMath/fast
 
 #=============================================================================
-# Target rules for targets named pico_sd_card_sd_card_pio_h
+# Target rules for targets named CMSISDSPController
 
 # Build rule for target.
-pico_sd_card_sd_card_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_sd_card_sd_card_pio_h
-.PHONY : pico_sd_card_sd_card_pio_h
+CMSISDSPController: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPController
+.PHONY : CMSISDSPController
 
 # fast build rule for target.
-pico_sd_card_sd_card_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/build.make pico_extras/src/rp2_common/pico_sd_card/CMakeFiles/pico_sd_card_sd_card_pio_h.dir/build
-.PHONY : pico_sd_card_sd_card_pio_h/fast
+CMSISDSPController/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/ControllerFunctions/CMakeFiles/CMSISDSPController.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/ControllerFunctions/CMakeFiles/CMSISDSPController.dir/build
+.PHONY : CMSISDSPController/fast
 
 #=============================================================================
-# Target rules for targets named pico_scanvideo_dpi_timing_pio_h
+# Target rules for targets named CMSISDSPFastMath
 
 # Build rule for target.
-pico_scanvideo_dpi_timing_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_scanvideo_dpi_timing_pio_h
-.PHONY : pico_scanvideo_dpi_timing_pio_h
+CMSISDSPFastMath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPFastMath
+.PHONY : CMSISDSPFastMath
 
 # fast build rule for target.
-pico_scanvideo_dpi_timing_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build.make pico_extras/src/rp2_common/pico_scanvideo_dpi/CMakeFiles/pico_scanvideo_dpi_timing_pio_h.dir/build
-.PHONY : pico_scanvideo_dpi_timing_pio_h/fast
+CMSISDSPFastMath/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/FastMathFunctions/CMakeFiles/CMSISDSPFastMath.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/FastMathFunctions/CMakeFiles/CMSISDSPFastMath.dir/build
+.PHONY : CMSISDSPFastMath/fast
 
-Wav.obj: Wav.cpp.obj
-.PHONY : Wav.obj
+#=============================================================================
+# Target rules for targets named CMSISDSPFiltering
+
+# Build rule for target.
+CMSISDSPFiltering: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPFiltering
+.PHONY : CMSISDSPFiltering
+
+# fast build rule for target.
+CMSISDSPFiltering/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/FilteringFunctions/CMakeFiles/CMSISDSPFiltering.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/FilteringFunctions/CMakeFiles/CMSISDSPFiltering.dir/build
+.PHONY : CMSISDSPFiltering/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPMatrix
+
+# Build rule for target.
+CMSISDSPMatrix: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPMatrix
+.PHONY : CMSISDSPMatrix
+
+# fast build rule for target.
+CMSISDSPMatrix/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/MatrixFunctions/CMakeFiles/CMSISDSPMatrix.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/MatrixFunctions/CMakeFiles/CMSISDSPMatrix.dir/build
+.PHONY : CMSISDSPMatrix/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPStatistics
+
+# Build rule for target.
+CMSISDSPStatistics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPStatistics
+.PHONY : CMSISDSPStatistics
+
+# fast build rule for target.
+CMSISDSPStatistics/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/StatisticsFunctions/CMakeFiles/CMSISDSPStatistics.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/StatisticsFunctions/CMakeFiles/CMSISDSPStatistics.dir/build
+.PHONY : CMSISDSPStatistics/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPSupport
+
+# Build rule for target.
+CMSISDSPSupport: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPSupport
+.PHONY : CMSISDSPSupport
+
+# fast build rule for target.
+CMSISDSPSupport/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/SupportFunctions/CMakeFiles/CMSISDSPSupport.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/SupportFunctions/CMakeFiles/CMSISDSPSupport.dir/build
+.PHONY : CMSISDSPSupport/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPTransform
+
+# Build rule for target.
+CMSISDSPTransform: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPTransform
+.PHONY : CMSISDSPTransform
+
+# fast build rule for target.
+CMSISDSPTransform/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/TransformFunctions/CMakeFiles/CMSISDSPTransform.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/TransformFunctions/CMakeFiles/CMSISDSPTransform.dir/build
+.PHONY : CMSISDSPTransform/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPCommon
+
+# Build rule for target.
+CMSISDSPCommon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPCommon
+.PHONY : CMSISDSPCommon
+
+# fast build rule for target.
+CMSISDSPCommon/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/CommonTables/CMakeFiles/CMSISDSPCommon.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/CommonTables/CMakeFiles/CMSISDSPCommon.dir/build
+.PHONY : CMSISDSPCommon/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPSVM
+
+# Build rule for target.
+CMSISDSPSVM: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPSVM
+.PHONY : CMSISDSPSVM
+
+# fast build rule for target.
+CMSISDSPSVM/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/SVMFunctions/CMakeFiles/CMSISDSPSVM.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/SVMFunctions/CMakeFiles/CMSISDSPSVM.dir/build
+.PHONY : CMSISDSPSVM/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPBayes
+
+# Build rule for target.
+CMSISDSPBayes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPBayes
+.PHONY : CMSISDSPBayes
+
+# fast build rule for target.
+CMSISDSPBayes/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/BayesFunctions/CMakeFiles/CMSISDSPBayes.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/BayesFunctions/CMakeFiles/CMSISDSPBayes.dir/build
+.PHONY : CMSISDSPBayes/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPDistance
+
+# Build rule for target.
+CMSISDSPDistance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPDistance
+.PHONY : CMSISDSPDistance
+
+# fast build rule for target.
+CMSISDSPDistance/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/DistanceFunctions/CMakeFiles/CMSISDSPDistance.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/DistanceFunctions/CMakeFiles/CMSISDSPDistance.dir/build
+.PHONY : CMSISDSPDistance/fast
+
+#=============================================================================
+# Target rules for targets named CMSISDSPInterpolation
+
+# Build rule for target.
+CMSISDSPInterpolation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMSISDSPInterpolation
+.PHONY : CMSISDSPInterpolation
+
+# fast build rule for target.
+CMSISDSPInterpolation/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMSIS_5/CMSIS/DSP/Source/InterpolationFunctions/CMakeFiles/CMSISDSPInterpolation.dir/build.make lib/CMSIS_5/CMSIS/DSP/Source/InterpolationFunctions/CMakeFiles/CMSISDSPInterpolation.dir/build
+.PHONY : CMSISDSPInterpolation/fast
+
+#=============================================================================
+# Target rules for targets named pico-tflmicro
+
+# Build rule for target.
+pico-tflmicro: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-tflmicro
+.PHONY : pico-tflmicro
+
+# fast build rule for target.
+pico-tflmicro/fast:
+	$(MAKE) $(MAKESILENT) -f lib/pico-tflmicro/CMakeFiles/pico-tflmicro.dir/build.make lib/pico-tflmicro/CMakeFiles/pico-tflmicro.dir/build
+.PHONY : pico-tflmicro/fast
+
+#=============================================================================
+# Target rules for targets named pico-tflmicro_test
+
+# Build rule for target.
+pico-tflmicro_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-tflmicro_test
+.PHONY : pico-tflmicro_test
+
+# fast build rule for target.
+pico-tflmicro_test/fast:
+	$(MAKE) $(MAKESILENT) -f lib/pico-tflmicro/CMakeFiles/pico-tflmicro_test.dir/build.make lib/pico-tflmicro/CMakeFiles/pico-tflmicro_test.dir/build
+.PHONY : pico-tflmicro_test/fast
+
+dsp/dsp_pipeline.obj: dsp/dsp_pipeline.cpp.obj
+.PHONY : dsp/dsp_pipeline.obj
 
 # target to build an object file
-Wav.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.obj
-.PHONY : Wav.cpp.obj
+dsp/dsp_pipeline.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/dsp/dsp_pipeline.cpp.obj
+.PHONY : dsp/dsp_pipeline.cpp.obj
 
-Wav.i: Wav.cpp.i
-.PHONY : Wav.i
+dsp/dsp_pipeline.i: dsp/dsp_pipeline.cpp.i
+.PHONY : dsp/dsp_pipeline.i
 
 # target to preprocess a source file
-Wav.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.i
-.PHONY : Wav.cpp.i
+dsp/dsp_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/dsp/dsp_pipeline.cpp.i
+.PHONY : dsp/dsp_pipeline.cpp.i
 
-Wav.s: Wav.cpp.s
-.PHONY : Wav.s
+dsp/dsp_pipeline.s: dsp/dsp_pipeline.cpp.s
+.PHONY : dsp/dsp_pipeline.s
 
 # target to generate assembly for a file
-Wav.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Wav.cpp.s
-.PHONY : Wav.cpp.s
+dsp/dsp_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/dsp/dsp_pipeline.cpp.s
+.PHONY : dsp/dsp_pipeline.cpp.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -309,7 +897,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.i
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -317,7 +905,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.s
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -325,7 +913,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.obj: hom
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -333,7 +921,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -341,7 +929,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -349,7 +937,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/tt
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -357,7 +945,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.i: home/ttb/
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -365,7 +953,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.s: home/ttb/
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -373,7 +961,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.obj: home/ttb/
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -381,7 +969,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.i: home/ttb/ra
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -389,7 +977,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.s: home/ttb/ra
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -397,7 +985,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.obj: home/ttb
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -405,7 +993,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.i: home/ttb/r
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -413,7 +1001,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.s: home/ttb/r
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/time.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -421,7 +1009,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -429,7 +1017,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -437,7 +1025,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -445,7 +1033,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.obj: home
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -453,7 +1041,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.i: home/t
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -461,7 +1049,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.s: home/t
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -469,7 +1057,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.obj: home/tt
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -477,7 +1065,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.i: home/ttb/
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -485,7 +1073,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.s: home/ttb/
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -493,7 +1081,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.obj: home/tt
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -501,7 +1089,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.i: home/ttb/
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -509,7 +1097,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.s: home/ttb/
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -517,7 +1105,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -525,7 +1113,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -533,7 +1121,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -541,7 +1129,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.o
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -549,7 +1137,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -557,7 +1145,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -565,7 +1153,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
@@ -573,7 +1161,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: ho
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
@@ -581,7 +1169,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: home
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
@@ -589,7 +1177,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: home
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
@@ -597,7 +1185,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -605,7 +1193,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -613,7 +1201,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -621,7 +1209,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -629,7 +1217,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -637,7 +1225,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -645,7 +1233,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: ho
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -653,7 +1241,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -661,7 +1249,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -669,7 +1257,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
@@ -677,7 +1265,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: ho
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
@@ -685,7 +1273,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: home
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
@@ -693,7 +1281,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: home
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -701,7 +1289,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: ho
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -709,7 +1297,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -717,7 +1305,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -725,7 +1313,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -733,7 +1321,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -741,7 +1329,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -749,7 +1337,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -757,7 +1345,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -765,7 +1353,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -773,7 +1361,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -781,7 +1369,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -789,7 +1377,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -797,7 +1385,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -805,7 +1393,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -813,7 +1401,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -821,7 +1409,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchd
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -829,7 +1417,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchd
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -837,7 +1425,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchd
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -845,7 +1433,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -853,7 +1441,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -861,7 +1449,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -869,7 +1457,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aea
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -877,7 +1465,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -885,7 +1473,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -893,7 +1481,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -901,7 +1489,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -909,7 +1497,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -917,7 +1505,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -925,7 +1513,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -933,7 +1521,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -941,7 +1529,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -949,7 +1537,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -957,7 +1545,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -965,15 +1553,39 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_ro
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -981,7 +1593,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_ro
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -989,7 +1601,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_ro
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -997,7 +1609,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_ro
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1005,7 +1617,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.ob
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1013,7 +1625,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.i:
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1021,7 +1633,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.s:
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1029,7 +1641,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1037,7 +1649,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int6
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1045,7 +1657,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1053,7 +1665,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1061,7 +1673,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1069,39 +1681,15 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aea
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj
-
-# target to build an object file
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i
-
-# target to preprocess a source file
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
-
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s
-
-# target to generate assembly for a file
-home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
-.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -1109,7 +1697,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.i
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -1117,7 +1705,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.s
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1125,7 +1713,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: 
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1133,7 +1721,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1141,7 +1729,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1149,7 +1737,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1157,7 +1745,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: 
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1165,7 +1753,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: 
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1173,7 +1761,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binar
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1181,7 +1769,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binar
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1189,7 +1777,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binar
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1197,7 +1785,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1205,7 +1793,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_d
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1213,7 +1801,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_d
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1221,7 +1809,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_d
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1229,7 +1817,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: ho
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1237,7 +1825,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1245,7 +1833,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -1253,7 +1841,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_ua
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -1261,7 +1849,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_ua
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -1269,15 +1857,87 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_ua
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
+
+# target to build an object file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
+
+# target to preprocess a source file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+
+# target to generate assembly for a file
+home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1285,7 +1945,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: ho
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1293,7 +1953,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: ho
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -1301,7 +1961,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id
 
 # target to build an object file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1309,7 +1969,7 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id
 
 # target to preprocess a source file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1317,32 +1977,3368 @@ home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id
 
 # target to generate assembly for a file
 home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+i2s_mic/i2s_microphone.obj: i2s_mic/i2s_microphone.cpp.obj
+.PHONY : i2s_mic/i2s_microphone.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+i2s_mic/i2s_microphone.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/i2s_mic/i2s_microphone.cpp.obj
+.PHONY : i2s_mic/i2s_microphone.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+i2s_mic/i2s_microphone.i: i2s_mic/i2s_microphone.cpp.i
+.PHONY : i2s_mic/i2s_microphone.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+i2s_mic/i2s_microphone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/i2s_mic/i2s_microphone.cpp.i
+.PHONY : i2s_mic/i2s_microphone.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+i2s_mic/i2s_microphone.s: i2s_mic/i2s_microphone.cpp.s
+.PHONY : i2s_mic/i2s_microphone.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+i2s_mic/i2s_microphone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/i2s_mic/i2s_microphone.cpp.s
+.PHONY : i2s_mic/i2s_microphone.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/c/common.obj: lib/pico-tflmicro/src/tensorflow/lite/c/common.c.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/c/common.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/c/common.c.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.c.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/c/common.i: lib/pico-tflmicro/src/tensorflow/lite/c/common.c.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/c/common.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/c/common.c.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.c.i
+
+lib/pico-tflmicro/src/tensorflow/lite/c/common.s: lib/pico-tflmicro/src/tensorflow/lite/c/common.c.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/c/common.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/c/common.c.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/c/common.c.s
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.obj: lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.i: lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.s: lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.obj: lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.i: lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.s: lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.obj: lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.i: lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.s: lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.obj: lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.i: lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.s: lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.obj: lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.i: lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.s: lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.obj: lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.i: lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.s: lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.i: lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.s: lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.i: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.s: lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.i: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.s: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.i: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.s: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.i: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.s: lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.i: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.s: lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.i: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.s: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.i: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.s: lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.i: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.s: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.i: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.s: lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.i: lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.s: lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.i: lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.s: lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.obj: lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.i: lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.s: lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.cpp.s
+
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.obj: lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.obj
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.obj
+
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.i: lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.i
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.i
+
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.s: lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.s
+.PHONY : lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.cpp.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.c.s
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.obj: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.obj
+
+# target to build an object file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.obj
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.obj
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.i: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.i
+
+# target to preprocess a source file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.i
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.i
+
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.s: lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.s
+
+# target to generate assembly for a file
+lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.s
+.PHONY : lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.c.s
+
+model/ml_model.obj: model/ml_model.cpp.obj
+.PHONY : model/ml_model.obj
+
+# target to build an object file
+model/ml_model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/model/ml_model.cpp.obj
+.PHONY : model/ml_model.cpp.obj
+
+model/ml_model.i: model/ml_model.cpp.i
+.PHONY : model/ml_model.i
+
+# target to preprocess a source file
+model/ml_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/model/ml_model.cpp.i
+.PHONY : model/ml_model.cpp.i
+
+model/ml_model.s: model/ml_model.cpp.s
+.PHONY : model/ml_model.s
+
+# target to generate assembly for a file
+model/ml_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/model/ml_model.cpp.s
+.PHONY : model/ml_model.cpp.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_tinyML.dir/build.make CMakeFiles/pico_tinyML.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -1356,17 +5352,83 @@ help:
 	@echo "... PioasmBuild"
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
-	@echo "... pico_audio_i2s_audio_i2s_pio_h"
-	@echo "... pico_audio_pwm_audio_pwm_pio_h"
-	@echo "... pico_audio_spdif_audio_spdif_pio_h"
-	@echo "... pico_scanvideo_dpi_timing_pio_h"
-	@echo "... pico_scanvideo_scanvideo_pio_h"
-	@echo "... pico_sd_card_sd_card_pio_h"
+	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... CMSISDSPBasicMath"
+	@echo "... CMSISDSPBayes"
+	@echo "... CMSISDSPCommon"
+	@echo "... CMSISDSPComplexMath"
+	@echo "... CMSISDSPController"
+	@echo "... CMSISDSPDistance"
+	@echo "... CMSISDSPFastMath"
+	@echo "... CMSISDSPFiltering"
+	@echo "... CMSISDSPInterpolation"
+	@echo "... CMSISDSPMatrix"
+	@echo "... CMSISDSPQuaternionMath"
+	@echo "... CMSISDSPSVM"
+	@echo "... CMSISDSPStatistics"
+	@echo "... CMSISDSPSupport"
+	@echo "... CMSISDSPTransform"
 	@echo "... bs2_default"
-	@echo "... main"
-	@echo "... Wav.obj"
-	@echo "... Wav.i"
-	@echo "... Wav.s"
+	@echo "... pico-tflmicro"
+	@echo "... pico-tflmicro_test"
+	@echo "... pico_tinyML"
+	@echo "... dsp/dsp_pipeline.obj"
+	@echo "... dsp/dsp_pipeline.i"
+	@echo "... dsp/dsp_pipeline.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/lib/tinyusb/src/tusb.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/common/pico_sync/critical_section.s"
@@ -1451,6 +5513,9 @@ help:
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_math.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i"
@@ -1464,9 +5529,6 @@ help:
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj"
-	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj"
-	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i"
-	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_platform/platform.s"
@@ -1489,15 +5551,441 @@ help:
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
+	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... home/ttb/raspberry-pi-pico/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... i2s_mic/i2s_microphone.obj"
+	@echo "... i2s_mic/i2s_microphone.i"
+	@echo "... i2s_mic/i2s_microphone.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/c/common.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/c/common.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/c/common.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/error_reporter.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/flatbuffer_conversions.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/op_resolver.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/core/api/tensor_utils.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/internal/quantization_util.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/kernels/kernel_util.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/all_ops_resolver.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/activations.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/arg_min_max.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ceil.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/circular_buffer.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/add.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/conv.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/depthwise_conv.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/fully_connected.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/mul.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/pooling.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/softmax.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/cmsis-nn/svdf.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/comparisons.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/concatenation.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/dequantize.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/detection_postprocess.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/elementwise.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/ethosu.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/flexbuffers_generated_data.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/floor.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/hard_swish.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_runner.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/kernel_util.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/l2norm.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logical.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/logistic.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/maximum_minimum.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/neg.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pack.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/pad.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/prelu.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/quantize.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reduce.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/reshape.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/resize_nearest_neighbor.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/round.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/shape.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/split_v.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/strided_slice.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/sub.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/tanh.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/kernels/unpack.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_helpers.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/greedy_memory_planner.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/memory_planner/linear_memory_planner.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_allocator.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_error_reporter.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_interpreter.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_profiler.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_string.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/micro_utils.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_micro_allocator.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/recording_simple_memory_allocator.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/debug_log.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/rp2/micro_time.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/simple_memory_allocator.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/test_helpers.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/micro/testing/test_conv_model.s"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.obj"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.i"
+	@echo "... lib/pico-tflmicro/src/tensorflow/lite/schema/schema_utils.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_nn_activations_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu6_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ActivationFunctions/arm_relu_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_add_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/BasicMathFunctions/arm_elementwise_mul_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_w.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_x.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_y.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConcatenationFunctions/arm_concatenation_s8_z.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1_x_n_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_HWC_q7_fast_nonsquare.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_1x1_s8_fast.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_basic.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q15_fast_nonsquare.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_RGB.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_basic_nonsquare.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_HWC_q7_fast_nonsquare.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_convolve_wrapper_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_3x3_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s8_opt.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_u8_basic_ver1.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_wrapper_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_separable_conv_HWC_q7_nonsquare.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_depthwise_conv_s8_core.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_q7_q15_reordered.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_kernel_s8_s16_reordered.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ConvolutionFunctions/arm_nn_mat_mult_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_mat_q7_vec_q15_opt.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q15_opt.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_q7_opt.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/FullyConnectedFunctions/arm_fully_connected_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_accumulate_q7_to_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_add_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_padded_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_depthwise_conv_nt_t_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_1x_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mul_core_4x_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mat_mult_nt_t_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_mult_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nn_vec_mat_mult_t_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_nntables.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_no_shift.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_no_shift.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_reordered_with_offset.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/NNSupportFunctions/arm_q7_to_q15_with_offset.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_avgpool_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_max_pool_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/PoolingFunctions/arm_pool_q7_HWC.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/ReshapeFunctions/arm_reshape_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SVDFunctions/arm_svdf_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q15.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_q7.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_s8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_u8.s"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.obj"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.i"
+	@echo "... lib/pico-tflmicro/src/third_party/cmsis/CMSIS/NN/Source/SoftmaxFunctions/arm_softmax_with_batch_q7.s"
+	@echo "... model/ml_model.obj"
+	@echo "... model/ml_model.i"
+	@echo "... model/ml_model.s"
+	@echo "... src/main.obj"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
