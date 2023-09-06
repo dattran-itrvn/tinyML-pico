@@ -34,7 +34,7 @@ volatile int new_samples_captured = 0;
 q15_t input_q15[INPUT_BUFFER_SIZE + (FFT_SIZE / 2)];
 
 DSPPipeline dsp_pipeline(FFT_SIZE);
-MLModel ml_model(tflite_model, 128 * 1024);
+MLModel ml_model(tflite_model, 18 * 1024);
 
 int8_t* scaled_spectrum = nullptr;
 int32_t spectogram_divider;
