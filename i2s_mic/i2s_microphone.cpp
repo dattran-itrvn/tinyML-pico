@@ -54,6 +54,8 @@
 #include "hardware/dma.h"
 #include "hardware/irq.h"
 
+STATIC uint16_t counterBytes = 0;
+
 STATIC machine_i2s_obj_t* machine_i2s_obj[MAX_I2S_RP2] = {NULL, NULL};
 
 // The frame map is used with the readinto() method to transform the audio sample data coming
@@ -585,10 +587,17 @@ STATIC void dma_irq_handler(uint8_t irq_index) {
         empty_dma(self, dma_buffer);
         dma_irqn_acknowledge_channel(irq_index, dma_channel);
         dma_channel_set_write_addr(dma_channel, dma_buffer, false);
+        counterBytes += SIZEOF_DMA_BUFFER_IN_BYTES;
     }
     
-    if (self->samples_ready_handler) {
-        self->samples_ready_handler();
+    if(counterBytes >= 8192){
+        counterBytes = 0;
+        if (self->samples_ready_handler) {
+            self->samples_ready_handler();
+        }
+    }
+    else{
+        return;
     }
 
 }

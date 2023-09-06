@@ -28,7 +28,6 @@
 #define SIZE_APP_BUFFER   (SIZEOF_DMA_BUFFER_IN_BYTES / 8)
 
 q15_t capture_buffer_q15[LEN_RECORD];
-int16_t buffer_record_full[LEN_RECORD];
 
 volatile int new_samples_captured = 0;
 
@@ -43,7 +42,6 @@ float spectrogram_zero_point;
 
 uint16_t countSample = 0;
 uint16_t byteReads = 0;
-int16_t sample_buffer[SIZE_APP_BUFFER/2];
 uint8_t id_i2s = 0;
 machine_i2s_obj_t* i2s0;
 double executionTimeData = 0;
@@ -55,8 +53,12 @@ clock_t clock()
 
 //// Callback function I2S /////
 void on_i2s_samples_ready(){
-    byteReads = machine_i2s_stream_read(i2s0, (void*)&buffer_record_full[countSample], SIZE_APP_BUFFER); // app buffer len <= dma buffer len / 8
-    countSample += byteReads/2;
+    // clock_t startTime = clock();
+    byteReads = machine_i2s_stream_read(i2s0, (void*)&capture_buffer_q15, INPUT_BUFFER_SIZE*2); // app buffer len <= dma buffer len / 8
+    // printf("%d\n",byteReads);
+    // clock_t endTime = clock();
+    // double executionTime = (double)(endTime - startTime);
+    // printf("%.2f micro sec\n", executionTime);
 }
 
 int main( void )
@@ -86,7 +88,7 @@ int main( void )
 
     i2s0 = machine_i2s_make_new(id_i2s, SCK, WS, SD,
                                 RX, BPS, MONO,
-                                SIZEOF_DMA_BUFFER_IN_BYTES * 10,
+                                SIZEOF_DMA_BUFFER_IN_BYTES * 50,
                                 SAMPLE_RATE);
 
     i2s_microphone_set_samples_ready(on_i2s_samples_ready, id_i2s);
@@ -101,16 +103,11 @@ int main( void )
     printf("--------------------------------------\n");
 
     while (1) {   
-        while (countSample < LEN_RECORD) {
+        while (byteReads < INPUT_BUFFER_SIZE*2) {
             tight_loop_contents();
-            printf("Enough data\r\n");
         } 
-        countSample = 0;
+        byteReads = 0;
 
-        clock_t startTime = clock();
-        for(int i = 0; i < LEN_RECORD; i++){
-            capture_buffer_q15[i] = buffer_record_full[i];
-        }
         dsp_pipeline.shift_spectrogram(scaled_spectrum, SPECTRUM_SHIFT, 124);
         // move input buffer values over by INPUT_BUFFER_SIZE samples
         memmove(input_q15, &input_q15[INPUT_BUFFER_SIZE], (FFT_SIZE / 2));
@@ -130,9 +127,6 @@ int main( void )
         } else {
             printf("\tFire Alarm\tNOT detected\t(prediction = %f)\n\n", prediction);
         }
-        clock_t endTime = clock();
-        double executionTime = (double)(endTime - startTime) / 1000;
-        printf("%.4f micro sec\n", executionTime);
     }
 
     return 0;

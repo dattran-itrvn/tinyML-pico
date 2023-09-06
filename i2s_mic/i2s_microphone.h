@@ -8,7 +8,7 @@
 // The DMA buffer size was empirically determined.  It is a tradeoff between:
 // 1. memory use (smaller buffer size desirable to reduce memory footprint)
 // 2. interrupt frequency (larger buffer size desirable to reduce interrupt frequency)
-#define SIZEOF_DMA_BUFFER_IN_BYTES (256)
+#define SIZEOF_DMA_BUFFER_IN_BYTES (512)
 #define SIZEOF_HALF_DMA_BUFFER_IN_BYTES (SIZEOF_DMA_BUFFER_IN_BYTES / 2)
 #define I2S_NUM_DMA_CHANNELS (2)
 
