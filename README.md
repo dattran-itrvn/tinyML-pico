@@ -26,4 +26,13 @@ There are 2 options:
 
 ![img.png](Origin_train%2Fimg.png)
 
+In Train without Normal option, we have three versions:
+![img.png](image%2Fimg.png)
++ Origin model, whose data is "labeled" 1 at the exactly area including the R peek
++ 2nd version model, whose data is "labeled" 1 at:
+    - the area includes the R peek being not at the first sample in this area
+    - the area before the one including the R peek being at the first sample in this area
++ 3rd version model, whose spectrogram will overlap 1 area among 2 5-second buffers
+
+The bxb result of three version model: [Results_bxb](Results_bxb)
   
