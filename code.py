@@ -1,14 +1,6 @@
-# SPDX-FileCopyrightText: 2017 Scott Shawcroft, written for Adafruit Industries
-# SPDX-FileCopyrightText: Copyright (c) 2021 Jeff Epler for Adafruit Industries
-#
-# SPDX-License-Identifier: Unlicense
-
-"""
-Capture an image from the camera and display it on a supported LCD.
-"""
 import sys
 import time
-
+from ulab import numpy as np
 import board
 import busio
 import digitalio
@@ -51,28 +43,25 @@ cam = OV7670(
     reset=board.GP10,
 )  # [14]
 
-cam.size = OV7670_SIZE_DIV8
-cam.colorspace = OV7670_COLOR_YUV
-cam.flip_y = True
+cam.size = OV7670_SIZE_DIV4
 
-buf = bytearray(2 * cam.width * cam.height)
-chars = b" .:-=+*#%@"
-6
+arr = np.zeros((cam.height, cam.width), dtype=np.uint16)
 width = cam.width
-row = bytearray(2 * width)
-
-sys.stdout.write("\033[2J")
-
+height = cam.height
+frame_id = 0
 while True:
-    cam.capture(buf)
-    for j in range(cam.height):
-        sys.stdout.write(f"\033[{j}H")
-        for i in range(cam.width):
-            row[i * 2] = row[i * 2 + 1] = chars[
-                buf[2 * (width * j + i)] * (len(chars) - 1) // 255
-            ]
-        sys.stdout.write(row)
-        sys.stdout.write("\033[K")
-        sys.stdout.write('\n')
-    sys.stdout.write("\033[J")
+    cam.capture(arr)
+    arr.byteswap(inplace=True)
+    sys.stdout.write('[' + f'{width:03}' + 'x' + f'{height:03}' + '] ' + f'{frame_id:04}' + '$')
+    for j in range(height):
+        for i in range(width):
+            pixel = arr[j, i]
+            sys.stdout.write(' ' + str(pixel))
+            
+    sys.stdout.write('\n')
     time.sleep(0.02)
+    frame_id += 1
+    if frame_id >= 9999:
+        frame_id = 0
+
+
