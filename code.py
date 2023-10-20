@@ -43,6 +43,33 @@ cam = OV7670(
     reset=board.GP10,
 )  # [14]
 
+# # Set up the ITR VN board
+# with digitalio.DigitalInOut(board.GP8) as reset:
+#     reset.switch_to_output(False)
+#     time.sleep(0.001)
+#     bus = busio.I2C(board.GP3, board.GP2)
+
+# # Set up the camera (you must customize this for your board!)
+# cam = OV7670(
+#     bus,
+#     data_pins=[
+#         board.GP14,
+#         board.GP15,
+#         board.GP16,
+#         board.GP17,
+#         board.GP18,
+#         board.GP19,
+#         board.GP20,
+#         board.GP21,
+#     ],  # [16]     [org] etc
+#     clock=board.GP13,  # [15]     [blk]
+#     vsync=board.GP10,  # [10]     [brn]
+#     href=board.GP11,  # [27/o14] [red]
+#     mclk=board.GP26,  # [16/o15]
+#     shutdown=None,
+#     reset=board.GP8,
+# )  # [14]
+
 cam.size = OV7670_SIZE_DIV4
 
 arr = np.zeros((cam.height, cam.width), dtype=np.uint16)
