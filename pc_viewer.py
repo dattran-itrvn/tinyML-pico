@@ -3,7 +3,7 @@ from PIL import Image
 from matplotlib import pyplot as plt
 import serial
 
-ser = serial.Serial('COM3')
+ser = serial.Serial('COM7')
 
 fig = plt.figure(figsize=(1, 2))
 viewer = fig.add_subplot(111)
