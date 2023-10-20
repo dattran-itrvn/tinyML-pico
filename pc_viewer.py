@@ -5,7 +5,7 @@ import serial
 
 ser = serial.Serial('COM3')
 
-fig = plt.figure()
+fig = plt.figure(figsize=(1, 2))
 viewer = fig.add_subplot(111)
 plt.ion() # Turns interactive mode on (probably unnecessary)
 fig.show() # Initially shows the figure
