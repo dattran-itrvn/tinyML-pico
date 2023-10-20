@@ -13,3 +13,4 @@ Follow this link [Hello Raspberry Pi: ov7670/ov2640 + ST7789 (IPS Display) on Ra
 Follow this blog  [Working with Image Data | Capturing Camera Images with CircuitPython | Adafruit Learning System](https://learn.adafruit.com/capturing-camera-images-with-circuitpython/working-with-image-data)to understand and read image output with ACSII ART. 
 
 
+pc_viewer.py must run on win (start vs on win)

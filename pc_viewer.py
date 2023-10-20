@@ -1,7 +1,21 @@
-import numpy as np
+# import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 import serial
+
+
+def comslist():
+    ports = []
+    for i in serial.tools.list_ports.comports():
+        try:
+            ser = serial.Serial(i.name)
+            ser.close()
+        except serial.SerialException as e:
+            print(e)
+        else:
+            ports.append(i.name)
+    ports.sort()
+    return ports
 
 ser = serial.Serial('COM7')
 
