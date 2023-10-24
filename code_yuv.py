@@ -45,17 +45,20 @@ cam = OV7670(
 
 cam.size = OV7670_SIZE_DIV8
 cam.colorspace = OV7670_COLOR_YUV
-arr = np.zeros((cam.height, cam.width), dtype=np.uint16)
+# arr = np.zeros((cam.height, cam.width), dtype=np.uint16)
+buf = bytearray(2 * cam.width * cam.height)
 width = cam.width
 height = cam.height
 frame_id = 0
 while True:
-    cam.capture(arr)
-    arr.byteswap(inplace=True)
+#     cam.capture(arr)
+    cam.capture(buf)
+#     arr.byteswap(inplace=True)
     sys.stdout.write('[' + f'{width:03}' + 'x' + f'{height:03}' + '] ' + f'{frame_id:04}' + '$')
     for j in range(height):
         for i in range(width):
-            pixel = arr[j, i]
+#             pixel = arr[j, i]
+            pixel = buf[2 * (width * j + i)]
             sys.stdout.write(' ' + str(pixel))
             
     sys.stdout.write('\n')
@@ -63,3 +66,4 @@ while True:
     frame_id += 1
     if frame_id >= 9999:
         frame_id = 0
+
