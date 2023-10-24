@@ -44,7 +44,7 @@ cam = OV7670(
 )  # [14]
 
 cam.size = OV7670_SIZE_DIV8
-
+cam.colorspace = OV7670_COLOR_YUV
 arr = np.zeros((cam.height, cam.width), dtype=np.uint16)
 width = cam.width
 height = cam.height
@@ -63,8 +63,3 @@ while True:
     frame_id += 1
     if frame_id >= 9999:
         frame_id = 0
-
-
-
-
-
