@@ -1267,7 +1267,7 @@ def ann(DIR, namefile):
     # sym[(sym == 'V') | (sym == 'e')] = 'V'
     # sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     sym[(sym == 'N') | (sym == 'L') | (sym == 'R') | (sym == 'e') | (sym == 'j')] = 'N'
-    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'V'
+    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'S'
     sym[(sym == 'V') | (sym == 'e')] = 'V'
     sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     fill_colorV = np.where(sym == 'V')[0] + 2
@@ -1366,9 +1366,9 @@ def ann(DIR, namefile):
         if flag_N:
 
             cnt=0
-            tmp_while = np.mean(rr[idx - cnt:idx])
-            while (divba[idx] > 0.6 and (abs(divba[idx+1]-divba[idx]) < 0.3) and divba[idx] < 1.4 and rr[idx+1]/tmp_while>0.6):
-                print(idx)
+            # tmp_while = np.mean(rr[idx - cnt:idx])
+            while (divba[idx] > 0.6 and (abs(divba[idx+1]-divba[idx]) < 0.3) and divba[idx] < 1.4):
+                # print(idx)
                 idx += 1
                 cnt += 1
                 if idx >= len(divba) - 1:
@@ -1748,9 +1748,40 @@ def ann(DIR, namefile):
         if detectsym2[i]=='N' and divba[i] < 0.85:
             if (ecg[bts[i]] * ecg[bts[i - 1]] < 0 and ecg[bts[i]] * ecg[bts[i + 1]] < 0) or (diff_fm[i] > 1.3 and diff_am[i] > 1.3):
                 detectsym2[i]='V'
+    detect = detectsym2.copy()
+    QS2 = np.array(QS2)
+    QS5 = np.array(QS5)
+    QS8 = np.array(QS8)
+    idxn = 1
+    while(True):
+        cnt = 0
+        while(detectsym2[idxn]=='N'):
+            idxn+=1
+            cnt+=1
+            if idxn >= len(detectsym2) - 1:
+                break
+        if cnt==0:
+            tmp2 = QS2[idxn]
+            tmp5 = QS5[idxn]
+            tmp8 = QS8[idxn]
+        else:
+            tmp2 = np.mean(QS2[idxn-cnt:idxn])
+            tmp5 = np.mean(QS5[idxn-cnt:idxn])
+            tmp8 = np.mean(QS8[idxn-cnt:idxn])
+        if idxn >= len(detectsym2) - 1:
+            break
+        while(detectsym2[idxn]!='N'):
 
+            tmp = (abs(QS2[idxn] - tmp2) / tmp2 + abs(QS5[idxn] - tmp5) / tmp5 + abs(QS8[idxn] - tmp8) / tmp8) / 2
+            if tmp<0.2 and (ecg[bts[idxn]]*ecg[bts[idxn-1]]>0 or ecg[bts[idxn]]*ecg[bts[idxn+1]]>0):
+                detectsym2[idxn]='S'
+            idxn+=1
+            if idxn >= len(detectsym2) - 1:
+                break
+        if idxn>=len(detectsym2)-1:
+            break
 
-
+    s=0
 
     wfdb.wrann(record_name=str(namefile),
                extension='atr',
@@ -1813,7 +1844,7 @@ def ann_ptk(DIR, namefile):
     # sym[(sym == 'V') | (sym == 'e')] = 'V'
     # sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     sym[(sym == 'N') | (sym == 'L') | (sym == 'R') | (sym == 'e') | (sym == 'j')] = 'N'
-    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'V'
+    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'S'
     sym[(sym == 'V') | (sym == 'e')] = 'V'
     sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     fill_colorV = np.where(sym == 'V')[0] + 2
@@ -1829,12 +1860,15 @@ def ann_ptk(DIR, namefile):
     # detectsym2[2:len(detectsym2)-1] = ' '
 
     df = np.diff(np.array(btss))
-    divba = np.zeros(len(btss))
-    divba[1:-1] = df[:-1] / df[1:]
-
+    if df[0]<200:
+        df[0]=200
     rr = [0]
     rr.extend(df)
     rr = np.array(rr)
+    divba = np.zeros(len(btss))
+    divba[1:-1] = df[:-1] / df[1:]
+
+
     # sym2 = sym.copy()
     #
     # idx2 = 0
@@ -1893,7 +1927,7 @@ def ann_ptk(DIR, namefile):
         if flag_N:
 
             cnt = 0
-            tmp_while = np.mean(rr[idx - cnt:idx])
+            tmp_while = rr[idx]
             while (divba[idx] > 0.6 and (abs(divba[idx + 1] - divba[idx]) < 0.3) and divba[idx] < 1.4 and rr[
                 idx + 1] / tmp_while > 0.6):
                 # print(idx)
@@ -1901,6 +1935,7 @@ def ann_ptk(DIR, namefile):
                 cnt += 1
                 if idx >= len(divba) - 1:
                     break
+                tmp_while = np.mean(rr[idx - cnt:idx])
             # if cnt==1:
             #     cnt=0
             # else:
@@ -2303,6 +2338,40 @@ def ann_ptk(DIR, namefile):
                     diff_fm[i] > 1.3 and diff_am[i] > 1.3):
                 detectsym2[i] = 'V'
     s=0
+
+    detect = detectsym2.copy()
+    QS2 = np.array(QS2)
+    QS5 = np.array(QS5)
+    QS8 = np.array(QS8)
+    idxn = 1
+    while(True):
+        cnt = 0
+        while(detectsym2[idxn]=='N'):
+            idxn+=1
+            cnt+=1
+            if idxn >= len(detectsym2) - 1:
+                break
+        if cnt==0:
+            tmp2 = QS2[idxn]
+            tmp5 = QS5[idxn]
+            tmp8 = QS8[idxn]
+        else:
+            tmp2 = np.mean(QS2[idxn-cnt:idxn])
+            tmp5 = np.mean(QS5[idxn-cnt:idxn])
+            tmp8 = np.mean(QS8[idxn-cnt:idxn])
+        if idxn >= len(detectsym2) - 1:
+            break
+        while(detectsym2[idxn]!='N'):
+
+            tmp = (abs(QS2[idxn] - tmp2) / tmp2 + abs(QS5[idxn] - tmp5) / tmp5 + abs(QS8[idxn] - tmp8) / tmp8) / 2
+            if tmp<0.2 and (ecg[btss[idxn]]*ecg[btss[idxn-1]]>0 or ecg[btss[idxn]]*ecg[btss[idxn+1]]>0):
+                detectsym2[idxn]='S'
+            idxn+=1
+            if idxn >= len(detectsym2) - 1:
+                break
+        if idxn>=len(detectsym2)-1:
+            break
+
     wfdb.wrann(record_name=str(namefile),
                extension='atr',
                sample=np.asarray(bts),
@@ -3110,7 +3179,7 @@ if __name__ == "__main__":
                     ann_ptk(DATA_DIR_FOLDER, i)
             else:
                 # ann(DATA_DIR_FOLDER, 207)
-                # ann(DATA_DIR_FOLDER, 106)
+                # ann(DATA_DIR_FOLDER, 232)
                 # ann(DATA_DIR_FOLDER, 101)
                 for i in TRAIN_DATA_DIR_STR:
                     ann(DATA_DIR_FOLDER, i)
