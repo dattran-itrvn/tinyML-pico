@@ -1813,7 +1813,7 @@ def ann_ptk(DIR, namefile):
     # sym[(sym == 'V') | (sym == 'e')] = 'V'
     # sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     sym[(sym == 'N') | (sym == 'L') | (sym == 'R') | (sym == 'e') | (sym == 'j')] = 'N'
-    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'S'
+    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'V'
     sym[(sym == 'V') | (sym == 'e')] = 'V'
     sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     fill_colorV = np.where(sym == 'V')[0] + 2
