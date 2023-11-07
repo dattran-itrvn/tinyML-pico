@@ -1,3 +1,4 @@
+
 import csv
 import numpy as np
 import wfdb
@@ -1179,21 +1180,24 @@ def main(DIR, namefile):
             else:
                 detectsym2[i]='S'
     err = []
-    err.extend(np.where(sym2=='S')[0][np.where(np.array(detectsym2)[np.where(sym2=='S')]!='S')[0]]+2)
-    err.extend(np.where(sym2=='V')[0][np.where(np.array(detectsym2)[np.where(sym2=='V')]!='V')[0]]+2)
-    err.extend(np.where(sym2=='N')[0][np.where(np.array(detectsym2)[np.where(sym2=='N')]!='N')[0]]+2)
+    # err.extend(np.where(sym2=='S')[0][np.where(np.array(detectsym2)[np.where(sym2=='S')]!='S')[0]]+2)
+    # err.extend(np.where(sym2=='V')[0][np.where(np.array(detectsym2)[np.where(sym2=='V')]!='V')[0]]+2)
+    # err.extend(np.where(sym2=='N')[0][np.where(np.array(detectsym2)[np.where(sym2=='N')]!='N')[0]]+2)
 
 
     expt= []
-    expt.extend(np.where(np.array(diff_fm)<0.15)[0] + 2)
+    # expt.extend(np.where(np.array(diff_fm)<0.15)[0] + 2)
     expt2 = []
-    expt2.extend(np.where(np.array(diff_am) < 0.15)[0] + 2)
+    # expt2.extend(np.where(np.array(diff_am) < 0.15)[0] + 2)
     err2 = []
     err2.extend(np.where(divba>1.4)[0]+2)
     rr = [0]
     rr.extend(df)
+    d_S = np.where(np.array(detectsym2)=='S')[0]+2
+    d_V = np.where(np.array(detectsym2)=='V')[0]+2
+
     # print(err)
-    return sym, bts, np.round(time,6), np.round(divba,6),rr,np.round(ecg[bts],6),diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2
+    return sym, bts, np.round(time,6), np.round(divba,6),rr,np.round(ecg[bts],6),diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2, d_V, d_S
 
     # for i in range(len(bts)):
     #     if detectsym2[i]=='V':
@@ -2475,7 +2479,7 @@ def ann_ptk_origin(DIR, namefile):
         btss[j] = np.argmax(abs(ecg[d_ptk_bts[j + top] - 30:d_ptk_bts[j + top] + 30])) + d_ptk_bts[j + top] - 30
 
     sym[(sym == 'N') | (sym == 'L') | (sym == 'R') | (sym == 'e') | (sym == 'j')] = 'N'
-    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'S'
+    sym[(sym == 'A') | (sym == 'a') | (sym == 'J') | (sym == 'S')] = 'V'
     sym[(sym == 'V') | (sym == 'e')] = 'V'
     sym[(sym == 'f') | (sym == 'Q') | (sym == 'F')] = 'N'
     fill_colorV = np.where(sym == 'V')[0] + 2
@@ -2694,18 +2698,18 @@ def ann_ptk_origin(DIR, namefile):
                 detectsym2[i]='V'
                 # s.append(i)
 
-    for i in range(2, len(detectsym2) - 2):
-        if detectsym2[i] == 'V':
-            if (diff_fm[i] >= 0.12 and diff_am[i] >= 0.12) or max(diff_fm[i], diff_am[i]) >= 0.5 or (
-                    ecg[btss[i]] * ecg[btss[i - 1]] < 0 and ecg[btss[i]] * ecg[btss[i + 1]] < 0):
-                detectsym2[i] = 'V'
-            else:
-                detectsym2[i] = 'S'
+    # for i in range(2, len(detectsym2) - 2):
+    #     if detectsym2[i] == 'V':
+    #         if (diff_fm[i] >= 0.12 and diff_am[i] >= 0.12) or max(diff_fm[i], diff_am[i]) >= 0.5 or (
+    #                 ecg[btss[i]] * ecg[btss[i - 1]] < 0 and ecg[btss[i]] * ecg[btss[i + 1]] < 0):
+    #             detectsym2[i] = 'V'
+    #         else:
+    #             detectsym2[i] = 'S'
 
     wfdb.wrann(record_name=str(namefile),
                extension='atr',
                sample=np.asarray(bts),
-               symbol=np.asarray(sym2),
+               symbol=np.asarray(sym),
                fs=360,
                write_dir='PTK')
 
@@ -2740,11 +2744,11 @@ if __name__ == "__main__":
         # main(DATA_DIR_FOLDER, 116)
         if origin:
             if PTK:
-                ann_ptk(DATA_DIR_FOLDER, 231)
-                # for i in TRAIN_DATA_DIR_STR:
-                #     ann_ptk_origin(DATA_DIR_FOLDER, i)
-                # for i in VALID_DATA_DIR_STR:
-                #     ann_ptk_origin(DATA_DIR_FOLDER, i)
+                # ann_ptk(DATA_DIR_FOLDER, 231)
+                for i in TRAIN_DATA_DIR_STR:
+                    ann_ptk_origin(DATA_DIR_FOLDER, i)
+                for i in VALID_DATA_DIR_STR:
+                    ann_ptk_origin(DATA_DIR_FOLDER, i)
             else:
                 for i in TRAIN_DATA_DIR_STR:
                     ann_origin(DATA_DIR_FOLDER, i)
@@ -2770,6 +2774,9 @@ if __name__ == "__main__":
 
         fcV_sheet1 = []
         fcS_sheet1 = []
+        dV_sheet1 = []
+        dS_sheet1 = []
+
         errs_sheet1 = []
         errs2_sheet1 = []
         expts_sheet1 = []
@@ -2790,10 +2797,12 @@ if __name__ == "__main__":
         errs2_sheet3 = []
         expts_sheet3 = []
         expts2_sheet3 = []
+        dV_sheet3 = []
+        dS_sheet3 = []
 
         for i in TRAIN_DATA_DIR_STR:
             # a, b, c, d, e, f, g, h, err, expt, cl = main(DATA_DIR_FOLDER, i)
-            sym, bts, time, divba,rr, btsv,diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2 = main(
+            sym, bts, time, divba,rr, btsv,diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2, d_V, d_S = main(
                 DATA_DIR_FOLDER, i)
             pa_sheet1_csv.append(sym)
             pa_sheet1_csv.append(bts)
@@ -2813,7 +2822,8 @@ if __name__ == "__main__":
             pa_sheet1_csv.append(diff_a8)
             pa_sheet1_csv.append(diff_fm)
             pa_sheet1_csv.append(diff_am)
-            # pa_sheet1_csv.append(nondata)
+            pa_sheet1_csv.append(nondata)
+            pa_sheet1_csv.append(nondata)
 
 
 
@@ -2835,17 +2845,19 @@ if __name__ == "__main__":
             name_sheet1_csv.append('diff_a8')
             name_sheet1_csv.append('diff_fm')
             name_sheet1_csv.append('diff_am')
-            # name_sheet1_csv.append(' ')
+            name_sheet1_csv.append(' ')
+            name_sheet1_csv.append(' ')
             fcV_sheet1.append(fill_colorV)
             fcS_sheet1.append(fill_colorS)
-
+            dS_sheet1.append(d_S)
+            dV_sheet1.append(d_V)
             errs_sheet1.append(err)
             errs2_sheet1.append(err2)
             expts_sheet1.append(expt)
             expts2_sheet1.append(expt2)
 
         for i in VALID_DATA_DIR_STR:
-            sym, bts, time, divba,rr, btsv,diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2 = main(
+            sym, bts, time, divba,rr, btsv,diff_tb, QS2, QS5, QS8, diff_f2, diff_a2,diff_f5, diff_a5, diff_f8, diff_a8, diff_fm, diff_am, fill_colorV, fill_colorS, nondata, err, expt, expt2, err2, d_V, d_S = main(
                 DATA_DIR_FOLDER, i)
             pa_sheet3_csv.append(sym)
             pa_sheet3_csv.append(bts)
@@ -2865,7 +2877,8 @@ if __name__ == "__main__":
             pa_sheet3_csv.append(diff_a8)
             pa_sheet3_csv.append(diff_fm)
             pa_sheet3_csv.append(diff_am)
-            # pa_sheet3_csv.append(nondata)
+            pa_sheet3_csv.append(nondata)
+            pa_sheet3_csv.append(nondata)
 
 
             name_sheet3_csv.append(i)
@@ -2886,9 +2899,12 @@ if __name__ == "__main__":
             name_sheet3_csv.append('diff_a8')
             name_sheet3_csv.append('diff_fm')
             name_sheet3_csv.append('diff_am')
-            # name_sheet3_csv.append(' ')
+            name_sheet3_csv.append(' ')
+            name_sheet3_csv.append(' ')
             fcV_sheet3.append(fill_colorV)
             fcS_sheet3.append(fill_colorS)
+            dS_sheet3.append(d_S)
+            dV_sheet3.append(d_V)
             errs_sheet3.append(err)
             errs2_sheet3.append(err2)
             expts_sheet3.append(expt)
@@ -2942,7 +2958,7 @@ if __name__ == "__main__":
         for i in range(len(fcV_sheet1)):
             for j in range(len(fcV_sheet1[i])):
                 row_index = fcV_sheet1[i][j]
-                col_index = i * 18
+                col_index = i * 20
 
                 # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet.cell(row=row_index, column=col_index + 1)
@@ -2973,11 +2989,19 @@ if __name__ == "__main__":
                 cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
                 cell_to_color = sheet.cell(row=row_index, column=col_index + 14)
                 cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 15)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 16)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 17)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 18)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
         for i in range(len(fcS_sheet1)):
             for j in range(len(fcS_sheet1[i])):
                 row_index = fcS_sheet1[i][j]
-                col_index = i * 18
+                col_index = i * 20
                 font = Font(color="FFFFFF")
                 # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet.cell(row=row_index, column=col_index + 1)
@@ -3022,43 +3046,72 @@ if __name__ == "__main__":
                 cell_to_color = sheet.cell(row=row_index, column=col_index + 14)
                 cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
                 cell_to_color.font = font
-
-        for i in range(len(errs_sheet1)):
-            for j in range(len(errs_sheet1[i])):
-                row_index = errs_sheet1[i][j]
-                col_index = i * 18
-
-                # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet.cell(row=row_index, column=col_index + 15)
-                cell_to_color.fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 16)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 17)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 18)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
 
+        for i in range(len(dS_sheet1)):
+            for j in range(len(dS_sheet1[i])):
+                row_index = dS_sheet1[i][j]
+                col_index = i * 20
+
+
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 19)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+
+        for i in range(len(dV_sheet1)):
+            for j in range(len(dV_sheet1[i])):
+                row_index = dV_sheet1[i][j]
+                col_index = i * 20
+
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 19)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+
+        # for i in range(len(errs_sheet1)):
+        #     for j in range(len(errs_sheet1[i])):
+        #         row_index = errs_sheet1[i][j]
+        #         col_index = i * 20
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet.cell(row=row_index, column=col_index + 15)
+        #         cell_to_color.fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+        #
         for i in range(len(errs2_sheet1)):
             for j in range(len(errs2_sheet1[i])):
                 row_index = errs2_sheet1[i][j]
-                col_index = i * 18
+                col_index = i * 20
 
                 # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet.cell(row=row_index, column=col_index + 14)
+                cell_to_color = sheet.cell(row=row_index, column=col_index + 4)
                 cell_to_color.fill = PatternFill(start_color="FF00FF", end_color="FF00FF", fill_type="solid")
-
-        for i in range(len(expts_sheet1)):
-            for j in range(len(expts_sheet1[i])):
-                # print(i,' ', j)
-                row_index = expts_sheet1[i][j]
-                col_index = i * 18
-
-                # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet.cell(row=row_index, column=col_index + 16)
-                cell_to_color.fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
-
-        for i in range(len(expts2_sheet1)):
-            for j in range(len(expts2_sheet1[i])):
-                row_index = expts2_sheet1[i][j]
-                col_index = i * 18
-
-                # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet.cell(row=row_index, column=col_index + 17)
-                cell_to_color.fill = PatternFill(start_color="00FFFF", end_color="00FFFF", fill_type="solid")
+        #
+        # for i in range(len(expts_sheet1)):
+        #     for j in range(len(expts_sheet1[i])):
+        #         # print(i,' ', j)
+        #         row_index = expts_sheet1[i][j]
+        #         col_index = i * 20
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet.cell(row=row_index, column=col_index + 16)
+        #         cell_to_color.fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
+        #
+        # for i in range(len(expts2_sheet1)):
+        #     for j in range(len(expts2_sheet1[i])):
+        #         row_index = expts2_sheet1[i][j]
+        #         col_index = i * 20
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet.cell(row=row_index, column=col_index + 17)
+        #         cell_to_color.fill = PatternFill(start_color="00FFFF", end_color="00FFFF", fill_type="solid")
 
         sheet3 = workbook.create_sheet(title="MORPHOLOGY DS2")
         # Đọc dữ liệu từ file CSV và ghi vào tệp Excel
@@ -3071,7 +3124,7 @@ if __name__ == "__main__":
         for i in range(len(fcV_sheet3)):
             for j in range(len(fcV_sheet3[i])):
                 row_index = fcV_sheet3[i][j]
-                col_index = i * 18
+                col_index = i * 20
 
                 # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet3.cell(row=row_index, column=col_index + 1)
@@ -3102,11 +3155,19 @@ if __name__ == "__main__":
                 cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
                 cell_to_color = sheet3.cell(row=row_index, column=col_index + 14)
                 cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 15)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 16)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 17)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 18)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
         for i in range(len(fcS_sheet3)):
             for j in range(len(fcS_sheet3[i])):
                 row_index = fcS_sheet3[i][j]
-                col_index = i * 18
+                col_index = i * 20
                 font = Font(color="FFFFFF")
                 # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet3.cell(row=row_index, column=col_index + 1)
@@ -3151,41 +3212,69 @@ if __name__ == "__main__":
                 cell_to_color = sheet3.cell(row=row_index, column=col_index + 14)
                 cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
                 cell_to_color.font = font
-
-        for i in range(len(errs_sheet3)):
-            for j in range(len(errs_sheet3[i])):
-                row_index = errs_sheet3[i][j]
-                col_index = i * 18
-
-                # Tô màu ô tại hàng và cột đã chỉ định
                 cell_to_color = sheet3.cell(row=row_index, column=col_index + 15)
-                cell_to_color.fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 16)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 17)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 18)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
+                cell_to_color.font = font
 
+        # for i in range(len(errs_sheet3)):
+        #     for j in range(len(errs_sheet3[i])):
+        #         row_index = errs_sheet3[i][j]
+        #         col_index = i * 18
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet3.cell(row=row_index, column=col_index + 15)
+        #         cell_to_color.fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+        #
         for i in range(len(errs2_sheet3)):
             for j in range(len(errs2_sheet3[i])):
                 row_index = errs2_sheet3[i][j]
-                col_index = i * 18
+                col_index = i * 20
 
                 # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet3.cell(row=row_index, column=col_index + 14)
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 4)
                 cell_to_color.fill = PatternFill(start_color="FF00FF", end_color="FF00FF", fill_type="solid")
+        #
+        # for i in range(len(expts_sheet3)):
+        #     for j in range(len(expts_sheet3[i])):
+        #         row_index = expts_sheet3[i][j]
+        #         col_index = i * 18
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet3.cell(row=row_index, column=col_index + 16)
+        #         cell_to_color.fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
+        #
+        # for i in range(len(expts2_sheet3)):
+        #     for j in range(len(expts2_sheet3[i])):
+        #         row_index = expts2_sheet3[i][j]
+        #         col_index = i * 18
+        #
+        #         # Tô màu ô tại hàng và cột đã chỉ định
+        #         cell_to_color = sheet3.cell(row=row_index, column=col_index + 17)
+        #         cell_to_color.fill = PatternFill(start_color="00FFFF", end_color="00FFFF", fill_type="solid")
 
-        for i in range(len(expts_sheet3)):
-            for j in range(len(expts_sheet3[i])):
-                row_index = expts_sheet3[i][j]
-                col_index = i * 18
+        for i in range(len(dS_sheet3)):
+            for j in range(len(dS_sheet3[i])):
+                row_index = dS_sheet3[i][j]
+                col_index = i * 20
 
-                # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet3.cell(row=row_index, column=col_index + 16)
-                cell_to_color.fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 19)
+                cell_to_color.fill = PatternFill(start_color="0000FF", end_color="0000FF", fill_type="solid")
 
-        for i in range(len(expts2_sheet3)):
-            for j in range(len(expts2_sheet3[i])):
-                row_index = expts2_sheet3[i][j]
-                col_index = i * 18
+        for i in range(len(dV_sheet3)):
+            for j in range(len(dV_sheet3[i])):
+                row_index = dV_sheet3[i][j]
+                col_index = i * 20
 
-                # Tô màu ô tại hàng và cột đã chỉ định
-                cell_to_color = sheet3.cell(row=row_index, column=col_index + 17)
-                cell_to_color.fill = PatternFill(start_color="00FFFF", end_color="00FFFF", fill_type="solid")
+                cell_to_color = sheet3.cell(row=row_index, column=col_index + 19)
+                cell_to_color.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
-        workbook.save('NSV12.xlsx')
+        workbook.save('NSV13.xlsx')
